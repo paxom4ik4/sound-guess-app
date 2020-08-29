@@ -1,0 +1,17 @@
+.finish-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finish-end {
+  font-size: 30px;
+}
+.finish-score {
+  text-align: center;
+}
+
+.finish-congratulation {
+  margin-bottom: 40px;
+}

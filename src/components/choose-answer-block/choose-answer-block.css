@@ -1,0 +1,23 @@
+.choose-answer-block {
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 10px 5px;
+}
+.list-group-item:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+.list-group-item {
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+.indicator {
+  padding-right: 10px;
+}
+.list-group-item.right {
+  color: green;
+}
+.list-group-item.wrong {
+  color: red;
+}

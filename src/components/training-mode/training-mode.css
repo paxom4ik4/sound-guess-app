@@ -1,0 +1,49 @@
+.container {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.training-img {
+  transition: 0.5s;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+.training-img:hover {
+  transition: 0.5s;
+  transform: translateX(10px);
+}
+.training-name {
+  text-align: center;
+}
+.training-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.list-item {
+  box-shadow: 0 0 3px 1px #ccc;
+  margin-bottom: 10px;
+  max-height: 350px;
+}
+.training-close {
+  position: absolute;
+  top: 20px;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-group {
+  margin-top: 10px;
+}
+.close-item {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.close-item:active {
+  transition: 0.3s;
+  color: black;
+}
