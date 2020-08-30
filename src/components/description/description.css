@@ -15,7 +15,7 @@
   justify-content: space-between;
   align-items: top;
 }
-.description-player-container {
+.desc-player-container {
   width: 70%;
 }
 .desc {
@@ -35,4 +35,23 @@
   padding-top: 10px;
   text-align: left;
   font-size: 18px;
+}
+@media (max-width: 400px) {
+  .desc-player-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .description-player-container {
+    width: 100%;
+  }
+  .desc-description-image {
+    border-radius: 5px;
+    width: 50%;
+  }
+  .desc-question-image {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

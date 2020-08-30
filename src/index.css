@@ -46,7 +46,11 @@ code {
   .choose-answer {
     flex-direction: column;
   }
-  .choose-answer div {
+  .choose-answer-block {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .description-block {
     width: 100%;
     margin-top: 10px;
   }

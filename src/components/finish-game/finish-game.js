@@ -3,7 +3,15 @@ import Restart from "../restart";
 import "./finish-game.css";
 export default class Finish extends Component {
   render() {
-    const congrat = <div></div>;
+    const congrat = (
+      <div className="certificate-container">
+        <img
+          className="certificate-img"
+          src="../constants/certificate.png"
+          alt="picture"
+        />
+      </div>
+    );
     return (
       <div className="finish jumbotron">
         <div className="finish-header">

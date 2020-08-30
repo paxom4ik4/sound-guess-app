@@ -5,3 +5,9 @@ ul .pagination {
   text-align: center;
   width: 100%;
 }
+.header span {
+  font-size: 24px;
+}
+.header-g {
+  color: #ffffff;
+}

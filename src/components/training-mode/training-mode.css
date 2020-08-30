@@ -24,7 +24,7 @@
 .list-item {
   box-shadow: 0 0 3px 1px #ccc;
   margin-bottom: 10px;
-  max-height: 350px;
+  max-height: 390px;
 }
 .training-close {
   position: absolute;
@@ -46,4 +46,21 @@
 .close-item:active {
   transition: 0.3s;
   color: black;
+}
+@media (max-width: 990px) {
+  .close-item {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .training-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .close-item {
+    margin-right: 35px;
+  }
 }

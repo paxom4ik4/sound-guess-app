@@ -26,8 +26,13 @@ export default class Header extends Component {
     const content = (
       <React.Fragment>
         <header className="navbar header">
-          <span>SoundGuess</span>
-          <span>Score: {score}</span>
+          <span>
+            <span className="header-g">S</span>ound
+            <span className="header-g">G</span>uess
+          </span>
+          <span>
+            Score: <span className="header-g">{score}</span>
+          </span>
         </header>
         <ul className="pagination">
           <li className="page-item active">

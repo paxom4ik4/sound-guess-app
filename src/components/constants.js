@@ -232,7 +232,8 @@ const Birds = [
 
 const Songs = [
   {
-    name: "Arctic Monkey",
+    name: "Arctic Monkeys",
+    ruName: "Арктические обезьяны",
     imgSrc: `${imgageSrc}songs/am.jpg`,
     audSrc: `${audioSrc}songs/am.mp3`,
     desc: "This section needs no description. Just enjoy the music",
@@ -240,6 +241,7 @@ const Songs = [
   },
   {
     name: "Queen",
+    ruName: "Королева",
     imgSrc: `${imgageSrc}songs/bf.jpg`,
     audSrc: `${audioSrc}songs/bf.mp3`,
     desc: "This section needs no description. Just enjoy the music",
@@ -247,6 +249,7 @@ const Songs = [
   },
   {
     name: "Radiohead",
+    ruName: "Radiohead",
     imgSrc: `${imgageSrc}songs/rc.jpg`,
     audSrc: `${audioSrc}songs/rc.mp3`,
     desc: "This section needs no description. Just enjoy the music",
@@ -254,6 +257,7 @@ const Songs = [
   },
   {
     name: "The Beatles",
+    ruName: "Битлз",
     imgSrc: `${imgageSrc}songs/tb-lb.jpg`,
     audSrc: `${audioSrc}songs/tb-lb.mp3`,
     desc: "This section needs no description. Just enjoy the music",
@@ -261,6 +265,7 @@ const Songs = [
   },
   {
     name: "The Smiths",
+    ruName: "The Smiths",
     imgSrc: `${imgageSrc}songs/ts.jpg`,
     audSrc: `${audioSrc}songs/ts.mp3`,
     desc: "This section needs no description. Just enjoy the music",

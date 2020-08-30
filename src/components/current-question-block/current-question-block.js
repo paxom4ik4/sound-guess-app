@@ -31,7 +31,7 @@ export default class CurrentQuestion extends Component {
 
         <div className="name-player-block">
           <div className="player-container">
-            <Player src={audioSrc} />
+            <Player src={audioSrc} isGuessed={this.props.isGuessed} />
           </div>
         </div>
       </div>

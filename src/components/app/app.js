@@ -15,9 +15,11 @@ import Description from "../description";
 import NextLevelButton from "../next-level-button";
 import Finish from "../finish-game";
 import Training from "../training-mode";
+import StartPage from "../start-page";
 
 export default class App extends Component {
   state = {
+    isStartPage: true,
     trainingMode: false,
     dataStage: 0,
     currentStage: 0,
@@ -39,11 +41,23 @@ export default class App extends Component {
   randomItem() {
     return Math.floor(Math.random() * 5);
   }
+  correctSound = () => {
+    const correct = new Audio();
+    correct.volume = 0.5;
+    correct.src = "./constants/correct.mp3";
+    correct.play();
+  };
+
+  wrongSound = () => {
+    const wrong = new Audio();
+    wrong.volume = 0.5;
+    wrong.src = "./constants/wrong.mp3";
+    wrong.play();
+  };
 
   setData = () => {
     switch (this.state.dataStage) {
       case 1: {
-        console.log("lol");
         this.setState((state) => {
           return {
             data: (state.data = PublicTransport),
@@ -52,7 +66,6 @@ export default class App extends Component {
         break;
       }
       case 2: {
-        console.log("lol");
         this.setState((state) => {
           return {
             data: (state.data = Transport),
@@ -61,7 +74,6 @@ export default class App extends Component {
         break;
       }
       case 3: {
-        console.log("lol");
         this.setState((state) => {
           return {
             data: (state.data = Animals),
@@ -70,7 +82,6 @@ export default class App extends Component {
         break;
       }
       case 4: {
-        console.log("lol");
         this.setState((state) => {
           return {
             data: (state.data = Birds),
@@ -79,7 +90,6 @@ export default class App extends Component {
         break;
       }
       case 5: {
-        console.log("lol");
         this.setState((state) => {
           return {
             data: (state.data = Songs),
@@ -103,7 +113,6 @@ export default class App extends Component {
     }
   };
   nextPropStage = () => {
-    console.log(this.state.data);
     this.setState((state) => {
       return {
         currentStage: state.currentStage + 1,
@@ -132,6 +141,7 @@ export default class App extends Component {
 
     if (targetName === this.state.currentQuestion.name) {
       target.className += " right";
+      this.correctSound();
       this.setState((state) => {
         return {
           dataStage: state.dataStage + 1,
@@ -140,6 +150,7 @@ export default class App extends Component {
         };
       });
     } else {
+      this.wrongSound();
       this.setState((state) => {
         return {
           maxScore: state.maxScore - 1,
@@ -188,9 +199,16 @@ export default class App extends Component {
       trainingMode: false,
     });
   };
+  onStart = (e) => {
+    const startPage = e.target;
+    const startPageDiv = startPage.closest("DIV");
+    startPageDiv.classList.add("anim");
+    setTimeout(() => {
+      this.setState({ isStartPage: false });
+    }, 500);
+  };
   render() {
-    console.log("next stage 2");
-    console.log(this.state.data[0].audSrc);
+    console.log(this.state.currentQuestion.name);
     const { name, imgSrc, audSrc } = this.state.currentQuestion;
     const { isGuessed, score, data } = this.state;
     const chooseAnswer = (
@@ -248,6 +266,8 @@ export default class App extends Component {
     );
     const display = this.state.trainingMode ? (
       <Training onClose={this.onClose} />
+    ) : this.state.isStartPage ? (
+      <StartPage onStart={this.onStart} />
     ) : (
       content
     );

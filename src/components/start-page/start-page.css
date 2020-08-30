@@ -1,0 +1,17 @@
+.logo-txt {
+  text-align: center;
+}
+
+.anim {
+  animation: loyal 1s;
+}
+
+@keyframes loyal {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-400px);
+  }
+}

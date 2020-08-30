@@ -11,7 +11,22 @@
 .finish-score {
   text-align: center;
 }
-
+.certificate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.certificate-img {
+  width: 100%;
+}
 .finish-congratulation {
   margin-bottom: 40px;
+}
+@media (max-width: 400px) {
+  .finish-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

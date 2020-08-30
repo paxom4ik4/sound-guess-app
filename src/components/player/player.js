@@ -4,10 +4,16 @@ import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 
 export default class Player extends Component {
+  state = {
+    isGuessed: this.props.isGuessed,
+  };
   render() {
+    console.log(!this.state.isGuessed);
     const { src } = this.props;
     return (
       <AudioPlayer
+        playing={!this.state.isGuessed}
+        stop={true}
         src={src}
         showSkipControls={false}
         showJumpControls={false}

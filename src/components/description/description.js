@@ -24,14 +24,14 @@ export default class Description extends Component {
             alt="icon"
             className="desc-description-image"
           />
-          <div className="description-player-container">
+          <div className="desc-player-container">
             <Player src={items[id].audSrc} />
           </div>
         </div>
 
         <div className="name-player-block">
           <div className="description-name">
-            {isGuessed ? items[id].name : "***"}
+            {isGuessed ? items[id].name + " | " + items[id].ruName : "***"}
           </div>
           <div className="desc">{items[id].desc}</div>
         </div>
